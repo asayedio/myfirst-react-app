@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Child from  './Child.js';
 import {num1,num2,test,test2} from './module.js';
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
         <p>
           Hello React  {num1 + num2} {test()} {test2()}
         </p>
-
+        <Child />
       </header>
     </div>
   );
