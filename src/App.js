@@ -1,12 +1,25 @@
-import React from 'react';
+import React ,{ useState }from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Child from  './Child.js';
 import {num1,num2,test,test2} from './module.js';
 function App() {
-  React.state = {
-    name:"Ahmed"
+  // Declare a new state variable, which we'll call "count"
+  const [info, changeIntialInfo] = React.useState({
+    name: 'Ahmed',
+    age: 25
+  });
+
+  function changeInfo() {
+    changeIntialInfo((prevState) => {
+      return({
+        ...prevState,
+        name: 'Mohamed'
+        ,age:30
+      });
+    });
   }
+
   function handleClick(e) {
     e.preventDefault();
     console.log(React.state.name);
@@ -19,6 +32,7 @@ function App() {
     e.preventDefault();
     console.log('The mouse was leaved.');
   }
+
 //the normal function
 function test() {
 console.log("Test !");
@@ -38,6 +52,9 @@ const testArrow = () => console.log("Test Arrow! ");
         <button onClick={handleClick } >Click</button>
         <button onMouseMove={handleMove } >Move</button>
         <button onMouseLeave={handleLeave } >Leave</button>
+        <button onClick={() => changeInfo()} >Change</button>
+        <p>{info.name}</p>
+        <p>{info.age}</p>
       </header>
     </div>
   );
