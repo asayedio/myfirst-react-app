@@ -129,6 +129,9 @@ button {
 .navbar .menu-item {
   margin: 0.5rem 0;
 }
+.navbar .menu-item .active{
+    font-weight: bold;
+  }
 .navbar .menu-link {
   font-family: inherit;
   font-size: 1rem;
