@@ -24,6 +24,7 @@ const Nav = () => {
 	<ul class="menu" id="menu">
 		<li class="menu-item"><NavLink to="/home" class="menu-link">Home</NavLink></li>
 		<li class="menu-item"><NavLink to="/about" class="menu-link">About</NavLink></li>
+        <li class="menu-item"><NavLink to="/blog" class="menu-link">Blog</NavLink></li>
 	</ul>
 	<div class="social">
 		<a href="#" class="social-item"><i class="fab fa-facebook"></i></a>

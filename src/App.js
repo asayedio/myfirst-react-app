@@ -8,6 +8,7 @@ import Items from './components/Items.js';
 import Nav from './components/Nav.js';
 import Home from './components/Home';
 import About from './components/About';
+import Blog from './components/Blog';
 class App extends Component {
   // Declare a new state variable, which we'll call "count"
   /*   const [info, changeIntialInfo] = React.useState({
@@ -114,6 +115,9 @@ class App extends Component {
             </Route>
             <Route exact path="/about">
               <About />
+            </Route>
+            <Route exact path="/blog">
+              <Blog />
             </Route>
             <Items items={this.state.items} />
             <button onClick={this.update}>Update</button>.
