@@ -6,16 +6,17 @@ class Items extends React.Component{
         const theItems = this.props.items;
         const items = theItems.map( (item) =>{
             return(
-                <div>
-                    <p>{item.id}</p>
-                    <p>{item.name}</p>
-                    <p>{item.age}</p>
+                <div key={item.id}>
+                    <div>{item.id}</div>
+                    <div>{item.name}</div>
+                    <div>{item.age}</div>
+                    <hr/>
                 </div>
             )
         })
         return(
             <div>
-                <p>{items}</p>
+                <div>{items}</div>
             </div>
         )
     }
