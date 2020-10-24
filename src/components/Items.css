@@ -1,0 +1,21 @@
+.item{
+    background-color: rgb(148, 143, 143);
+    margin:10px;
+    padding: 15px;
+    display: flex;
+}
+.item .id{
+    font-weight: bold;
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #fff;
+}
+.item .name{
+    font-weight: bold;
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #fff;
+}
+.item .age{
+    font-weight: bold;
+}
