@@ -40,9 +40,19 @@ class App extends Component {
   }
   //the arrow function //we can remove {} in case it's only one line
   const testArrow = () => console.log("Test Arrow! ");  */
- /*  state = {
+   state = {
     name: ''
-  } */
+  } 
+  constructor(){
+    super();
+    console.log("constructor");
+}
+componentDidMount(){
+  console.log("componentDidMount");
+}
+componentDidUpdate(preveprops,prevState){
+  console.log("componentDidUpdate",preveprops,prevState);
+}
   state = {
     items: [
       { id: 1, name: 'Ahmed', age: 20 },
@@ -53,7 +63,18 @@ class App extends Component {
       { id: 6, name: 'Zyad', age: 30 }
     ]
   };
-
+  update = (e) => {
+    let items = this.state.items;
+    items.push({id:7,name:'Mo',age:40});
+    this.setState({
+      items : items
+    })
+  }
+  delete = (e) => {
+    this.setState({
+      name: e.target.value
+    });
+  }
   textChange = (e) => {
     this.setState({
       name: e.target.value
@@ -66,6 +87,7 @@ class App extends Component {
     });
   }
   render() {
+    console.log("render");
     return (
       <div className="App">
         <header className="App-header">
@@ -83,7 +105,8 @@ class App extends Component {
         <p>{info.age}</p> */}
 
           <Items items={this.state.items} />
-
+          <button onClick={this.update}>Update</button>.
+          <button onClick={this.delete}>Delete</button>
           <p>Form</p>
           <p>{this.state.name}</p>
           <form onSubmit={this.submitForm}>
