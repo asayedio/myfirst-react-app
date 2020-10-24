@@ -50,6 +50,20 @@ state = {
     {id:6,name:'Zyad',age:30}
   ]
 };
+state ={
+  name:''
+}
+textChange =(e) => {
+  this.setState({
+    name:e.target.value
+  }); 
+}
+submitForm =(e) => {
+  e.preventDefault();
+  this.setState({
+    name:'Succesully'
+  });
+}
 render(){
   return (
     <div className="App">
@@ -66,7 +80,24 @@ render(){
         <button onClick={() => changeInfo()} >Change</button>
         <p>{info.name}</p>
         <p>{info.age}</p> */}
-        <Items items={this.state.items}/>
+        {/* List Array
+        <Items items={this.state.items}/> */}
+        <p>Form</p>
+      <p>{this.state.name}</p>
+        <form onSubmit={this.submitForm}>
+          {/* <input type="text" onChange={this.textChange}/>
+          <button>Submit</button> */}
+          <textarea type="text" onChange={this.textChange}/>
+          <br />
+          <select onChange={this.textChange}>
+            <option value="v1">Option 1</option>
+            <option value="v2">Option 2</option>
+            <option value="v3">Option 3</option>
+            <option value="v4">Option 4</option>
+          </select>
+          <br />
+          <input type="submit" value="send" onSubmit={this.submitForm}/>
+        </form>
       </header>
     </div>
   );
