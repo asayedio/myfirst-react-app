@@ -1,5 +1,5 @@
 import React, { useState, Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route ,Switch } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import Child from './Child.js';
@@ -110,6 +110,7 @@ class App extends Component {
         <p>{info.name}</p>
         <p>{info.age}</p> */}
             <Nav />
+            <Switch>
             <Route exact path="/home">
               <Home />
             </Route>
@@ -119,6 +120,8 @@ class App extends Component {
             <Route exact path="/blog">
               <Blog />
             </Route>
+            </Switch>
+            
             <Items items={this.state.items} />
             <button onClick={this.update}>Update</button>.
           <button onClick={this.delete}>Delete</button>
