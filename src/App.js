@@ -9,6 +9,7 @@ import Nav from './components/Nav.js';
 import Home from './components/Home';
 import About from './components/About';
 import Blog from './components/Blog';
+import logopng from './logo512.png';
 class App extends Component {
   // Declare a new state variable, which we'll call "count"
   /*   const [info, changeIntialInfo] = React.useState({
@@ -141,6 +142,7 @@ class App extends Component {
               <br />
               <input type="submit" value="send" onSubmit={this.submitForm} />
             </form>
+            <img src={logopng} className="img"/>
           </header>
         </div>
 
